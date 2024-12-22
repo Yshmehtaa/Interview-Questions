@@ -1,0 +1,73 @@
+1] What is the difference between internet and intranet?
+2] List out OSI layers?
+3] burp suite works in which layer of OSI model?
+4] FTP, DNS, DHCP, port number?
+5] difference between VA and PT?
+6] Why to perform pentesting?
+7] how risk can be defined? (threat x vuln)
+8] What is threat?
+9] What is vulnerability?
+10] What is FTP? which is safe ftp or sftp?
+11] Why we use https and not http?
+12] What is CIA model?
+13] Difference between authentication and authorization?
+14] Difference between encoding, encryption and hashing?
+15] Data which is getting stored in database should be encrypted or hashed?
+16] What is sql injection and mitigation?
+17] Why to use prepared statement/parameterized queries?
+18] Difference between CORS and SOP?
+19] CORS mitigation and how will you perform CORS in an application?
+20] What is Dom based XSS? how will you identify it?
+21] What kind of security issue arises when session token are not random?
+22] Do before and after login session id should be same or different? if different then why?
+23] What is session hijacking? how will you perform it?
+24] What is CSP?
+25] What is CSRF and mitigation?
+26] What happens when an application takes users provided data and sends it to web browser without proper validation and escaping?
+27] What is Cross Site Tracing (XST)? How can it be prevented?  
+28] What are X-Frame-Options?  
+29] What is click jacking?
+30] How does SSL/TLS work ?
+31] How to use Content Security Policy (CSP) against clickjacking?  
+32] How to check if HSTS is enabled?  
+33] Who will you perform SSRF ? its mitigation?
+34] Is it possible to perform SSRF on host header?
+35] List the various methodologies in Security testing?
+36] Consider you have blackbox application, what will be your approach and what all test cases can you perform?
+37] What is parameter manipulation?
+38] What is HTTP parameter pollution? How will you perform? Behaviour of this attack is based on backend technology?
+39] What are cookie attributes? (expires, domain, path, secure, httponly, samesite, secure)
+40] Why samesite attribute is used in cookies header?
+41] Common misconfiguration in session id implementation?
+42] What is session puzzling? and how will you perform it?
+43] What are cache control header?
+44] What is back and refresh attack?
+45] What is CAPTCHA and how to bypass CAPTCHA implementation?
+46] Testing to bypass 2FA.
+47] Difference between parameter manipulation and IDOR?
+48] Difference between vertical and horizonal privilege escalation?
+49] Privilege escalation comes under which cataegories of OWASP top 10?
+50] Before providing access, whats does SOP checked for? what are the 3 thing which it checks to valide whether its coming from correct origin?
+51] What SOP is required?
+52] How CORS works? how to test for CORS?
+52] Impact of CSRF? How will you perform CSRF?
+53] Give example of clickjacking how will you perform it?
+54] Filter bypass techniques in XSS?
+55] Common sources and sink for DOM XSS?
+56] What is html injection? what further attacks you can perform with HTML injection?
+57] Diffrence between self signed and CA certificate?
+58] What is SSTI? how will you perform it? and its mitigation.
+59] What is file upload? its mitigation?
+60] What are file upload bypass techniques?
+61]  Difference between directory listing and path traversal
+62] Difference between LFI and RFI?
+63] Bypass techniques for path traversal?
+64] Insecure deserialization
+65] how will you perform host header injection?
+66] Is it possible to perform XSS attack through CRLF injection? if yes, then how will you do it?
+67] Web cache poisoning / password reset poisoning?
+68] What is XML injection? how will you perform it?
+69] How will you identify whether its an XML request?
+70] Who will you perform SSRF via XXE
+71] How will you identify LDAP injection?
+72] How will you identify SSTI?

@@ -1,0 +1,32 @@
+Introduce your your self with experince the lates vulnerabilitires that you find
+explain about that vulnerability with approach and mitigation
+1] What is your critical finding in your current project?
+2] How will you confirm if HSTS is enabled, apart from checking in response.
+3] What will be your approach for application testing?
+4] Is it necessary to perform active scan on application? if yes, then why its necessary?
+5] What security headers needs to be checked on application.
+6] Consider cookie is been compromised by MITM attack, a developer comes and ask for mitigation. So what kind of mitigation you will suggest.
+7] Test cases for fileupload? and its mitigation.
+8] what is host header injection and how will you perform it?
+9] Is it possible to perform SSRF via hostheader injection? if yes, then how will you do it?
+10] What is SQL injection and its type?
+11] How will you identify if an application is vulnerable to sql injection?
+12] Why CSRF token is required?
+13] CSRF Token should be in post request or get request?
+14] How will you perform SQL to RCE?
+15] Is it possible to perform account takeover through XSS?
+16] What will be the standard values for CSP(content security policy)?
+17] Data which is in rest should be encrypted or hashed?
+18] What test cases will you perform on url parameter?
+19] Consider if pre and post login session are same. What will be the impact it creates?
+20] Difference between session hijacking and session fixation with example?
+21] How will you perform CRLF attack? and its mitigation?
+22] How will you perform XSS through CRLF attack?
+23] Consider if HR is able to view manager's account details, So what kind of an attack it is?
+24] Difference between horizontal and vertical privilege escalation with example? and its mitigation?
+25] What is cors and how will you protect an application from cors
+26] Difference between authentication and autherization?
+27] Techniques to prevent brute force attack on login page?
+28] What is SOP and how it works?
+29] How to mitigate the risk of Sensitive Data Exposure?
+30] Test cases for OTP bypass?
