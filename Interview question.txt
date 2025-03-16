@@ -1,4 +1,4 @@
-1] What is the difference between internet and intranet?
+1] What is the difference between internet and intranet? 
 2] List out OSI layers?
 3] burp suite works in which layer of OSI model?
 4] FTP, DNS, DHCP, port number?
@@ -30,7 +30,7 @@
 30] How does SSL/TLS work ?
 31] How to use Content Security Policy (CSP) against clickjacking?  
 32] How to check if HSTS is enabled?  
-33] Who will you perform SSRF ? its mitigation?
+33] How will you perform SSRF ? its mitigation?
 34] Is it possible to perform SSRF on host header?
 35] List the various methodologies in Security testing?
 36] Consider you have blackbox application, what will be your approach and what all test cases can you perform?
@@ -48,7 +48,7 @@
 48] Difference between vertical and horizonal privilege escalation?
 49] Privilege escalation comes under which cataegories of OWASP top 10?
 50] Before providing access, whats does SOP checked for? what are the 3 thing which it checks to valide whether its coming from correct origin?
-51] What SOP is required?
+51] Why SOP is required?
 52] How CORS works? how to test for CORS?
 52] Impact of CSRF? How will you perform CSRF?
 53] Give example of clickjacking how will you perform it?
@@ -71,3 +71,135 @@
 70] Who will you perform SSRF via XXE
 71] How will you identify LDAP injection?
 72] How will you identify SSTI?
+73} Can we exploit RCE Via SQL Injection ? 
+
+
+
+Dom based xss real time scenario
+Csrf using put method
+Api test cases
+Rce
+Difference in directory traversal n lfi
+Xpath injection
+Ssrf
+Ssl pinning
+Intent in Android
+Api testing 
+Ssl handshake
+Cookie types
+Authentication types
+Http headers
+
+Questions
+
+1) how to bypass SSL pinning - with a scenario - if pinning bypass is not possible? tools in Cydia.
+
+2) Xmas scan for Nmap and different types of namp scan
+
+3) CSRF mitigation instead of a random token implementation
+
+4) Tools to scan mobile application - what are the different static analysis for apk or ipa? - dynamic analysis?
+
+5) Hashing and Encryption difference
+
+6) For PT what are the different tools and approach?
+
+
+http request header
+
+http methods how to use it
+
+SSL explained
+
+Weak hashing algorithm in SSL
+
+Why Secure flag is require over SSL?
+
+types of privilege escalation
+
+IDOR and Privilege escalation - example
+
+Clickjacking and CSRF similarities
+
+XPATH and Sameorigion policy.
+
+Directory listing
+
+Directory traversal
+
+java serialization and deserialization
+
+session fixation
+
+burp intruder
+
+type of encryption
+
+Kali Linux use? - Beginner
+
+OWASP top-10 2017
+
+
+How to find a particular host from same network
+
+
+Bind shell and Reverse shell
+
+Mobile testing iOS 
+
+SOP: same origin Policy
+
+How to mitigate CSRF
+
+how to attack network if dhcp is not configured
+
+Default admin user name password for iOS devices
+
+What is mutation XSS?
+
+What you can perform with SQL injection other than database damage?
+
+Flaws in hashing algorithms? Like MD5
+
+What is hashing Encoding and Encryption?
+
+Top vulnerabilities in Mobile applications?
+
+What is reverse shell and Bind Shell?
+
+What is Intruder in Burp?
+
+What is Exploitative PT?
+
+
+How to exploit multiple vulnerabilities? like xxs iframe cickjacking
+
+RFI and LFI?
+
+PROPOND methods http
+
+Port numbers
+
+CA checklist
+
+HTTP responses
+
+Payment Gateway related vulnerabilities
+
+What is SSRF?
+
+LFI and RFI?
+
+Path relative stylesheet import PRSSI vulnerabilities
+
+On which factor cvss score calculated
+
+How to detect deserialization using code review 
+
+Jwt token test cases 
+How bypass root
+CORS
+Request smuggling
+Auth Saml
+Jwt bypass
+Oauth attack

@@ -1,0 +1,56 @@
+
+1. About yourself - (Working with company with this many yrs & worked mostly on banking clients, currently also working with bank as TL)
+2. Responsibilities as a TL - Assigning the Task to Team Members, Reviewing Reports, Discussion/meeting with appowners regarding vulnerabilities.
+
+WEB APPLICATION:
+1. Approach of testing for Web Application & what all things you will check & how will you start testing.
+2. What is injection, how will you exploit & what will be impact of this on organization/bank.
+3. Different types of Sqlinjection, how will you check & what is the mitigation.(Alwayz explain with example/scenario). Also gothrough manual exploitation using UNION or ORDER BY.
+4. what is xss? Different types of XSS. How will you exploit it & how to mitigate it.(Alwayz explain with example/scenario) No need to give difinition, simply start with example.
+5. What is Csrf? how will you exploit & what are the mitigation.
+6. Is HTTPOnly can be bypasse? If yes, then how?
+7. What is the significance of Secure flag?
+8. What do you mean by hsts header.
+9. What is cors & how it is exploited. What is the mitigation.
+10. If suppose there are 2 scenarios 1. application is running on https & data is going in cleartext 2. Application is running on HTTP & data is going in encrypted format. Which of the scenarios you can say that it is safe?
+11. What vulnerabiltiy you have found the most & is your favourite . (never say anyone vulnerability instead say not a favourite one but can say that how can you exploit that one particular vulnerability in different ways).
+12. If client is not accepting any vulnerability then how will you convince him.
+13. If suppose you have given reflected xss as high, but client says it won't impact much as it is just a one time click so the risk should be reduce to medium/low. How will convince him on this?
+14. What is XST? What can be done using XST?
+15. Fileupload? Different testcases & how to mitigate it.
+16. CSV injection? How it happens & what will be the impact.
+17. XEE Attack. Why it happens & what you can do with this. How to mitigate it.
+18. What is 2nd Order Sql Injection? How it is exploited?
+19. How will you diferentiate whether the XSS happened is DOM, Reflected/Stored?
+20. If Suppose there is XSS on GET/POST Method. Is it valid? If Yes, then how to exploit & if Not, Then explain the reason.
+21. What do you mean by session puzzling? How will you exploit it?
+22. What is double submit cookie? how it mitigate application from CSRF?
+23. Suppose if there is a .Net based application. You have given Parameter Manipulation point as HIGH & they are saying like it is not possible for us to do code level changes as we want to go live in next 2 hours. So what will you suggest them to mitigate Param Manipulation without any code level changes.
+24. What other mitigations will you suggest for Sql Injection except Parameterized Query & Input Validation.
+25. If application is already running on HTTPS, is there any need of Secure flag?
+26. If Session is set properly & it is also getting validated properly then csrf is possible?
+
+Mobile Application:
+1. Approach of testing for Mobile Application. What tools you use for testing.
+2. What all checks will you perform during static analysis.
+3. What is ssl pinning? What are the ways to bypass it. Explain
+4. If application is running on rooted device, what will be the impact or how it is vulnerable.
+5. Bydefault value of Backup, Debuggable & Exported.
+6. How to Exploit Backup, Debuggable & Exported?
+7. How Mobile Testing is different from Web Application & WebAPI.
+8. What is Webview? How will yuh identify the vulnerability & what all you can do if Webview is enabled.
+9. what tool is used for Source code Obfuscation.
+10. What if Read_External_Storage & Write_External_Storage permission is set? What will happen & how will you mitigate it.
+11. What is content providers. How it works & how will you exploit it?
+12. What if it is a business Requirement to use Read_External_Storage & Write_External_Storage permissions then what other mitigation will you suggest?
+13. What is intent filter? what are its type & how will you exploit it?
+
+API:
+1. What is Webservices & where it is used.
+2. How webservices is different from Web/Mobile Application?
+3. Approach for testing. What tools you use during testing?
+4. What is wsdl? It should be directly accessible or not? If not, then how to secure it?
+5. What testcases will you perform during API testing.
+6. How will you check for authentication? & what all mitigation will you provide for authentication?
+7. Is Xss is possible in API?
+8. What kind of vulnerabilities will you check for if you get API for testing.
